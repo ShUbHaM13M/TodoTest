@@ -10,6 +10,7 @@ const AddTodo = ({ setTodos }) => {
  
   const handleOnSubmit = e => {
     e.preventDefault()
+    if (content === '') return;
     setTodos(prev => {
       const newTodo = {
         id: Math.random(),
